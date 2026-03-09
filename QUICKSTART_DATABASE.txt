@@ -1,0 +1,173 @@
+╔═══════════════════════════════════════════════════════════════════════╗
+║         STOCK MARKET GAME - QUICK START WITH DATABASE                ║
+║                    ALL PROGRESS AUTO-SAVED!                           ║
+╚═══════════════════════════════════════════════════════════════════════╝
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃  STEP 1: RUN THE GAME                                               ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+Option A (Easiest):
+   Double-click: run_game.bat
+
+Option B (Manual):
+   java -cp ".;mysql-connector-j-9.4.0.jar" StockMarketGame
+
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃  STEP 2: FIRST TIME SETUP                                           ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+When game launches for the first time:
+   1. Enter your name (e.g., "John")
+   2. You start with $100,000
+   3. Start trading!
+
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃  STEP 3: NEXT TIME YOU PLAY                                         ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+When you launch again, you'll see TWO options:
+
+   ╭─────────────────────────────────────────╮
+   │  Continue Previous Session              │ ◄── Load your saved game
+   ├─────────────────────────────────────────┤
+   │  Start New Game                         │ ◄── New player, fresh start
+   ╰─────────────────────────────────────────╯
+
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃  WHAT GETS SAVED AUTOMATICALLY                                      ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+✓ Every time you BUY a stock       → Auto-saved!
+✓ Every time you SELL a stock      → Auto-saved!
+✓ When you EXIT the game           → Auto-saved!
+✓ When you start a NEW GAME        → Previous game saved!
+
+Your saved data includes:
+   • Cash balance
+   • All stocks in portfolio
+   • Purchase prices & quantities
+   • Complete transaction history
+   • Player level & profit/loss
+
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃  GAME MENU OPTIONS                                                  ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+Game Menu:
+   • New Game   → Start fresh (saves current progress first)
+   • Save Game  → Manually save your progress
+   • Load Game  → Switch to another saved player
+   • Exit       → Quit and auto-save
+
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃  EXAMPLE GAMEPLAY                                                   ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+Day 1:
+   1. Launch game → Enter name "Alice" → Start with $100,000
+   2. Buy 10 shares of AAPL @ $175.50 → Auto-saved!
+   3. Buy 5 shares of TSLA @ $245.80 → Auto-saved!
+   4. Exit game → Auto-saved!
+
+Day 2:
+   1. Launch game → "Continue Previous Session"
+   2. Select "Alice" → Everything restored!
+      • Cash: $96,771 (remaining after purchases)
+      • Portfolio: 10 AAPL + 5 TSLA
+      • History: Shows both purchases
+   3. Sell 5 AAPL @ $180.00 → Auto-saved!
+   4. Exit game → Auto-saved!
+
+Day 3:
+   1. Launch game → "Start New Game"
+   2. Enter name "Bob" → Fresh $100,000
+   3. Bob's game is separate from Alice's
+   4. Can switch: Game → Load Game → Select "Alice"
+
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃  MULTIPLE PLAYERS                                                   ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+You can have MULTIPLE saved games:
+   • Alice's game: $150,000 net worth, Level 2
+   • Bob's game: $80,000 net worth, Level 1
+   • Charlie's game: $200,000 net worth, Level 2
+
+Switch between them anytime:
+   Game Menu → Load Game → Select player
+
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃  TROUBLESHOOTING                                                    ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+Problem: Game says "Database connection failed"
+Fix: Make sure MySQL is running
+     • Open MySQL Workbench
+     • Or run: mysql -u root -p
+
+Problem: "No saved games found"
+Fix: This is normal! Play the game first, it will save automatically.
+
+Problem: Can't compile/run
+Fix: Use the provided run_game.bat file
+     Or ensure mysql-connector-j-9.4.0.jar is in the folder
+
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃  VIEW YOUR DATA (OPTIONAL)                                          ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+Want to see your saved data in MySQL?
+
+1. Open MySQL command line:
+   mysql -u root -p
+   (Password: Vignesh#1234567890)
+
+2. Use the database:
+   USE stock_market;
+
+3. View your players:
+   SELECT * FROM players;
+
+4. View your portfolio:
+   SELECT * FROM portfolio;
+
+5. View transactions:
+   SELECT * FROM transactions ORDER BY transaction_date DESC;
+
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃  READY TO PLAY!                                                     ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+Everything is set up! Just run:
+
+   run_game.bat
+
+Your progress will NEVER be lost! Trade with confidence! 📈💰
+
+
+═══════════════════════════════════════════════════════════════════════
+                      FEATURES AT A GLANCE
+═══════════════════════════════════════════════════════════════════════
+
+✓ Auto-save on every trade
+✓ Auto-save on exit
+✓ Continue previous session
+✓ Multiple player profiles
+✓ Complete transaction history
+✓ Portfolio persistence
+✓ Manual save/load anytime
+✓ No data loss ever!
+
+═══════════════════════════════════════════════════════════════════════
+                         HAPPY TRADING!
+═══════════════════════════════════════════════════════════════════════

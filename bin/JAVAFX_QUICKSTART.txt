@@ -1,0 +1,255 @@
+╔═══════════════════════════════════════════════════════════════════════╗
+║     STOCK MARKET GAME - JAVAFX VERSION QUICK START                   ║
+║                    Modern GUI Edition                                 ║
+╚═══════════════════════════════════════════════════════════════════════╝
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃  STEP 1: INSTALL JAVAFX (ONE-TIME SETUP)                            ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+1. Download JavaFX SDK:
+   → Visit: https://gluonhq.com/products/javafx/
+   → Download JavaFX 21 (or latest)
+   → Extract to: C:\javafx-sdk-21
+
+2. Set Environment Variable:
+   → Open Command Prompt as Administrator
+   → Run: setx PATH_TO_FX "C:\javafx-sdk-21\lib"
+   → Restart terminal/VS Code
+
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃  STEP 2: RUN THE GAME                                                ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+Option A - VS Code (Easiest):
+   1. Open project in VS Code
+   2. Open StockMarketGameFX.java
+   3. Press F5 or click Run
+
+Option B - Batch File:
+   Double-click: run_game_fx.bat
+
+Option C - Manual:
+   javac --module-path "%PATH_TO_FX%" --add-modules javafx.controls ^
+     -cp ".;mysql-connector-j-9.4.0.jar" StockMarketGameFX.java ^
+     TradingPanelFX.java PortfolioPanelFX.java NewsPanelFX.java ^
+     TransactionHistoryPanelFX.java
+   
+   java --module-path "%PATH_TO_FX%" --add-modules javafx.controls ^
+     -cp ".;mysql-connector-j-9.4.0.jar" StockMarketGameFX
+
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃  WHAT'S NEW IN JAVAFX VERSION                                        ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+✨ Modern Look & Feel
+   • Clean, professional interface
+   • Smooth animations
+   • Better colors and gradients
+   • Hardware-accelerated graphics
+
+🎨 Better Visual Design
+   • Improved table views with sorting
+   • Animated progress bars
+   • Modern dialogs and alerts
+   • Color-coded risk levels
+
+💅 CSS Styling
+   • Customizable appearance via style.css
+   • Easy to modify colors and fonts
+   • Professional default theme
+
+⚡ Enhanced Performance
+   • GPU acceleration
+   • Smoother updates
+   • Better memory management
+
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃  ALL FEATURES RETAINED                                                ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+✓ Database persistence (auto-save)
+✓ Continue previous session
+✓ Multiple player profiles
+✓ Buy/Sell stocks
+✓ Portfolio management
+✓ Transaction history
+✓ Real-time price updates
+✓ Market news & events
+✓ Risk analysis
+✓ Stock filtering
+✓ Level progression
+
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃  BOTH VERSIONS AVAILABLE                                              ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+┌─────────────────────────────────────────────────────────────────┐
+│  SWING VERSION (Classic)                                        │
+├─────────────────────────────────────────────────────────────────┤
+│  Files: StockMarketGame.java + Swing panels                     │
+│  Run:   run_game.bat                                            │
+│  Look:  Traditional Java GUI                                    │
+│  Setup: No extra dependencies                                   │
+└─────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────┐
+│  JAVAFX VERSION (Modern) ⭐ RECOMMENDED                         │
+├─────────────────────────────────────────────────────────────────┤
+│  Files: StockMarketGameFX.java + JavaFX panels                  │
+│  Run:   run_game_fx.bat                                         │
+│  Look:  Modern, professional GUI                                │
+│  Setup: Requires JavaFX SDK                                     │
+└─────────────────────────────────────────────────────────────────┘
+
+Both share the same database - your saved games work in both versions!
+
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃  VISUAL IMPROVEMENTS                                                  ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+Trading Panel:
+   • Color-coded risk levels (green/yellow/red backgrounds)
+   • Modern styled buttons (BUY green, SELL red)
+   • Smooth table row selection
+   • Better column headers
+
+Portfolio Panel:
+   • Animated progress bar for level progression
+   • Color-coded profit/loss display
+   • Modern info cards with gradients
+   • Clean statistics layout
+
+News Panel:
+   • Improved text area styling
+   • Better scrolling
+   • Professional appearance
+
+Transaction History:
+   • Color-coded BUY/SELL entries
+   • Sortable columns
+   • Clean table design
+
+Dialogs:
+   • Modern alert boxes
+   • Better confirmation dialogs
+   • Professional input dialogs
+
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃  CUSTOMIZATION                                                        ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+Want to change colors? Edit style.css:
+
+/* Change buy button color */
+.button {
+    -fx-background-color: #YOUR_COLOR;
+}
+
+/* Change table selection color */
+.table-row-cell:selected {
+    -fx-background-color: #YOUR_COLOR;
+}
+
+/* Change progress bar color */
+.progress-bar .bar {
+    -fx-background-color: #YOUR_COLOR;
+}
+
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃  TROUBLESHOOTING                                                      ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+Error: "JavaFX runtime components are missing"
+Fix:
+   1. Download JavaFX SDK from gluonhq.com
+   2. Set PATH_TO_FX environment variable
+   3. Restart terminal/IDE
+
+Error: "Module javafx.controls not found"
+Fix:
+   Add to compile/run command:
+   --module-path "C:\javafx-sdk-21\lib" --add-modules javafx.controls
+
+Error: Database connection failed
+Fix:
+   • Ensure MySQL is running
+   • Check password: Vignesh#1234567890
+   • Verify database: stock_market
+
+VS Code not detecting JavaFX?
+Fix:
+   1. Install "Extension Pack for Java"
+   2. Set PATH_TO_FX environment variable
+   3. Restart VS Code
+
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃  FILE ORGANIZATION                                                    ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+JavaFX Files (NEW):
+   StockMarketGameFX.java      - Main JavaFX application
+   TradingPanelFX.java          - Trading interface
+   PortfolioPanelFX.java        - Portfolio display
+   NewsPanelFX.java             - News feed
+   TransactionHistoryPanelFX.java - Transaction log
+   style.css                    - Styling
+   run_game_fx.bat              - Launcher
+
+Swing Files (Original):
+   StockMarketGame.java         - Main Swing application
+   TradingPanel.java
+   PortfolioPanel.java
+   NewsPanel.java
+   TransactionHistoryPanel.java
+   run_game.bat
+
+Shared Files:
+   DatabaseManager.java         - Database operations
+   Player.java                  - Player logic
+   Stock.java + subclasses      - Stock types
+   Portfolio.java               - Portfolio management
+   Transaction.java             - Transaction records
+   StockPriceSimulator.java     - Price updates
+   MarketNewsGenerator.java     - News generation
+   All filter/analyzer classes
+
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃  RECOMMENDED: JAVAFX VERSION                                          ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+Why JavaFX?
+   ✓ Modern, professional appearance
+   ✓ Better performance (GPU accelerated)
+   ✓ Easier to customize (CSS)
+   ✓ Smooth animations
+   ✓ Active development by Oracle/Gluon
+   ✓ Future-proof
+
+Why Keep Swing?
+   ✓ No additional dependencies
+   ✓ Works on any Java installation
+   ✓ Familiar to many developers
+   ✓ Stable and reliable
+
+
+═══════════════════════════════════════════════════════════════════════
+                    READY TO PLAY!
+═══════════════════════════════════════════════════════════════════════
+
+1. Set up JavaFX (one-time)
+2. Run: run_game_fx.bat
+3. Enjoy the modern GUI!
+
+Your saved games from Swing version will work perfectly in JavaFX!
+
+Happy Trading! 📈💰

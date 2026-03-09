@@ -1,0 +1,215 @@
+╔════════════════════════════════════════════════════════════════╗
+║     STOCK MARKET SIMULATOR - QUICK START GUIDE                 ║
+╚════════════════════════════════════════════════════════════════╝
+
+🎮 HOW TO RUN THE GAME
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Open Terminal/Command Prompt
+2. Navigate to the java folder:
+   cd "c:\Users\vicky\Desktop\4th sem\java"
+
+3. Compile (if needed):
+   javac *.java
+
+4. Run GUI Game:
+   java StockMarketGame
+
+5. Or run Console Demo:
+   java StockMarketSimulator
+
+📋 GAME CONTROLS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+TRADING TAB:
+• Click stock row to select
+• Set quantity with spinner (arrows or type number)
+• Click BUY (green) to purchase
+• Click SELL (red) to sell
+• Click Refresh to update prices manually
+
+PORTFOLIO TAB:
+• View all your holdings
+• Check net worth and profit/loss
+• Monitor your level progress
+• See portfolio analysis
+
+TRANSACTIONS TAB:
+• Review complete trade history
+• See timestamps and amounts
+
+MENU BAR:
+• Game → New Game, Exit
+• Market → Refresh, Generate News
+• Analysis → Portfolio Analysis, Filter Stocks
+• Help → About, How to Play
+
+🎯 GAME OBJECTIVE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Starting Cash: $100,000
+Goal: Maximize your net worth!
+
+LEVEL UP SYSTEM:
+Level 1: $0 - $99,999
+Level 2: $100,000 - $199,999
+Level 3: $200,000 - $299,999
+... and so on!
+
+🎨 COLOR CODES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+STOCK RISK LEVELS (Trading Table):
+🟢 Green  = Low Risk (< 30%)   → Safer investments
+🟡 Yellow = Mid Risk (30-60%)  → Balanced risk
+🔴 Red    = High Risk (> 60%)  → Volatile, risky
+
+PROFIT/LOSS:
+🟢 Green = Profit (positive)
+🔴 Red   = Loss (negative)
+
+📊 AVAILABLE STOCKS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+COMMON STOCKS (8):
+• AAPL  - Apple Inc.           (Technology)
+• MSFT  - Microsoft Corp.      (Technology)
+• GOOGL - Alphabet Inc.        (Technology)
+• NVDA  - NVIDIA Corp.         (Technology)
+• TSLA  - Tesla Inc.           (Automotive)
+• F     - Ford Motor Co.       (Automotive)
+• JPM   - JPMorgan Chase       (Banking)
+• BAC   - Bank of America      (Banking)
+• JNJ   - Johnson & Johnson    (Healthcare)
+• PFE   - Pfizer Inc.          (Healthcare)
+
+PREFERRED STOCKS (3):
+• VZ-P  - Verizon Preferred    (Telecommunications)
+• BAC-P - Bank of America Pref (Banking)
+• T-P   - AT&T Preferred       (Telecommunications)
+
+BONDS (3):
+• T-10Y   - US Treasury 10Y    (Government) ⭐ Lowest Risk
+• CORP-5Y - Corporate Bond 5Y  (Corporate)
+• MUNI-7Y - Municipal Bond 7Y  (Municipal)
+
+💡 TRADING TIPS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. START SAFE: Buy some bonds first (low risk, stable)
+2. DIVERSIFY: Don't put all money in one stock
+3. WATCH NEWS: Events affect prices (green = good, red = bad)
+4. BUY LOW, SELL HIGH: Classic strategy!
+5. MANAGE RISK: Balance high-risk and low-risk stocks
+6. CHECK PORTFOLIO: Monitor your total value regularly
+7. PATIENCE: Wait for price movements
+8. USE FILTERS: Market → Analysis → Filter Stocks
+
+⚡ REAL-TIME FEATURES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ Prices update every 3 seconds
+✅ Market news every 15 seconds  
+✅ Statistics refresh every 5 seconds
+✅ Multi-threaded simulation
+✅ Thread-safe operations
+
+🎓 JAVA GENERICS (For Teacher)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+The game demonstrates ALL Generics requirements:
+
+1. GENERIC CLASS:
+   Portfolio<T> - Manages any type collection
+
+2. BOUNDED GENERIC CLASS:
+   StockAnalyzer<T extends Stock> - Works with Stock types only
+
+3. GENERIC METHODS:
+   StockUtility methods process any collection/type
+
+4. GENERIC INTERFACE:
+   StockFilter<T> - Flexible filtering system
+
+5. INHERITANCE:
+   Stock → CommonStock, PreferredStock, Bond
+
+USE IN GAME:
+• Menu → Analysis → Portfolio Analysis (uses StockAnalyzer)
+• Menu → Analysis → Filter Stocks (uses StockFilter)
+• All portfolio operations (uses Portfolio<T>)
+
+🔧 TROUBLESHOOTING
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PROBLEM: Window doesn't appear
+SOLUTION: Check if Java is installed (java -version)
+
+PROBLEM: Compilation errors
+SOLUTION: Make sure all 22 .java files are in same folder
+         Run: javac *.java
+
+PROBLEM: "Can't buy stock"
+SOLUTION: Check if you have enough cash (top of Trading tab)
+
+PROBLEM: "Can't sell stock"
+SOLUTION: You must own the stock first (check Portfolio tab)
+
+PROBLEM: Prices not updating
+SOLUTION: Wait 3 seconds, or use Market → Refresh Prices
+
+📞 KEYBOARD SHORTCUTS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Currently implemented:
+• Alt + G → Game menu
+• Alt + M → Market menu  
+• Alt + A → Analysis menu
+• Alt + H → Help menu
+
+📁 FILE STRUCTURE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+DOMAIN CLASSES (4):
+Stock.java, CommonStock.java, PreferredStock.java, Bond.java
+
+GENERIC CLASSES (4):
+Portfolio.java, StockAnalyzer.java, StockUtility.java, StockFilter.java
+
+FILTER IMPLEMENTATIONS (4):
+HighValueStockFilter.java, HighRiskStockFilter.java,
+LowRiskStockFilter.java, SectorStockFilter.java
+
+GAME SYSTEM (4):
+Player.java, Transaction.java, StockPriceSimulator.java,
+MarketNewsGenerator.java
+
+GUI COMPONENTS (5):
+StockMarketGame.java (main), TradingPanel.java, PortfolioPanel.java,
+NewsPanel.java, TransactionHistoryPanel.java
+
+CONSOLE VERSION (1):
+StockMarketSimulator.java
+
+📖 DOCUMENTATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+README.md           - Original console version documentation
+README_GAME.md      - Complete game documentation
+QUICK_START.txt     - This file
+
+🎉 HAVE FUN TRADING!
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Remember: It's a game, so experiment!
+• Try different strategies
+• Test the filters
+• Watch how news affects prices
+• See if you can reach Level 5 ($500,000+)
+
+Good luck! 📈💰
+
+╔════════════════════════════════════════════════════════════════╗
+║  Created with ❤️ for Java Programming Lab                      ║
+║  Demonstrating OOP, Generics, GUI, Threads, and more!         ║
+╚════════════════════════════════════════════════════════════════╝

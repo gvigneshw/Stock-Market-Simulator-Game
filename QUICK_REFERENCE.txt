@@ -1,0 +1,206 @@
+╔════════════════════════════════════════════════════════════════════╗
+║           JDBC INTEGRATION - QUICK REFERENCE CARD                  ║
+╚════════════════════════════════════════════════════════════════════╝
+
+┌─────────────────────────────────────────────────────────────────────┐
+│ 1. COMPILE & RUN COMMANDS                                           │
+└─────────────────────────────────────────────────────────────────────┘
+
+Compile:
+  javac -cp ".;mysql-connector-j-9.4.0.jar" *.java
+
+Run Game:
+  java -cp ".;mysql-connector-j-9.4.0.jar" StockMarketGame
+
+Test Database:
+  java -cp ".;mysql-connector-j-9.4.0.jar" TestDatabaseConnection
+
+
+┌─────────────────────────────────────────────────────────────────────┐
+│ 2. DATABASE CREDENTIALS                                             │
+└─────────────────────────────────────────────────────────────────────┘
+
+Database: stock_market
+Host:     localhost:3306
+Username: root
+Password: Vignesh#1234567890
+Driver:   com.mysql.cj.jdbc.Driver
+
+
+┌─────────────────────────────────────────────────────────────────────┐
+│ 3. KEY CODE SNIPPETS                                                │
+└─────────────────────────────────────────────────────────────────────┘
+
+Initialize Database:
+  DatabaseManager dbManager = new DatabaseManager();
+
+Save Player:
+  int playerId = dbManager.savePlayer(player);
+
+Load Player:
+  Player player = dbManager.loadPlayer("PlayerName");
+
+Save Portfolio:
+  dbManager.savePortfolio(playerId, player.getPortfolio().getHoldings());
+
+Save Transaction:
+  dbManager.saveTransaction(playerId, transaction);
+
+Get Player ID:
+  int id = dbManager.getPlayerIdByName(player.getName());
+
+Close Connection:
+  dbManager.closeConnection();
+
+
+┌─────────────────────────────────────────────────────────────────────┐
+│ 4. MYSQL COMMANDS                                                   │
+└─────────────────────────────────────────────────────────────────────┘
+
+Connect to MySQL:
+  mysql -u root -p
+  (password: Vignesh#1234567890)
+
+Use Database:
+  USE stock_market;
+
+View Tables:
+  SHOW TABLES;
+
+View Players:
+  SELECT * FROM players;
+
+View Portfolio:
+  SELECT * FROM portfolio WHERE player_id = 1;
+
+View Transactions:
+  SELECT * FROM transactions WHERE player_id = 1 ORDER BY transaction_date DESC;
+
+View Statistics:
+  SELECT * FROM player_statistics;
+
+Clear Data:
+  TRUNCATE TABLE transactions;
+  TRUNCATE TABLE portfolio;
+  TRUNCATE TABLE players;
+
+
+┌─────────────────────────────────────────────────────────────────────┐
+│ 5. FILES CREATED                                                    │
+└─────────────────────────────────────────────────────────────────────┘
+
+✓ DatabaseManager.java           - Main JDBC wrapper class
+✓ schema.sql                      - Database schema
+✓ TestDatabaseConnection.java    - Connection test program
+✓ DATABASE_SETUP.md               - Complete setup guide
+✓ JDBC_INTEGRATION.md             - Integration overview
+✓ DatabaseIntegrationExample.java - Code examples
+✓ QUICK_REFERENCE.txt             - This file
+
+
+┌─────────────────────────────────────────────────────────────────────┐
+│ 6. INTEGRATION CHECKLIST                                            │
+└─────────────────────────────────────────────────────────────────────┘
+
+□ Add DatabaseManager field to StockMarketGame
+□ Initialize dbManager in constructor
+□ Add currentPlayerId tracking field
+□ Implement checkForSavedGame() method
+□ Implement loadGame() method
+□ Implement saveGame() method
+□ Call save after buy/sell operations
+□ Add Save/Load menu items
+□ Close connection on game exit
+□ (Optional) Add auto-save timer
+
+
+┌─────────────────────────────────────────────────────────────────────┐
+│ 7. TROUBLESHOOTING                                                  │
+└─────────────────────────────────────────────────────────────────────┘
+
+Problem: ClassNotFoundException
+Fix: Ensure JAR is in classpath when compiling and running
+
+Problem: SQLException - Access Denied
+Fix: Check username/password, verify MySQL is running
+
+Problem: Database doesn't exist
+Fix: DatabaseManager auto-creates it, or run schema.sql manually
+
+Problem: Tables not created
+Fix: Check user permissions, run schema.sql manually
+
+Problem: Connection refused
+Fix: Start MySQL service, check port 3306 is open
+
+
+┌─────────────────────────────────────────────────────────────────────┐
+│ 8. TABLE STRUCTURE                                                  │
+└─────────────────────────────────────────────────────────────────────┘
+
+players:
+  - player_id (PK, AUTO_INCREMENT)
+  - name (UNIQUE)
+  - cash
+  - initial_cash
+  - level
+  - total_profit
+  - created_at, last_updated
+
+portfolio:
+  - portfolio_id (PK, AUTO_INCREMENT)
+  - player_id (FK -> players)
+  - stock_symbol
+  - stock_name
+  - quantity
+  - purchase_price
+  - stock_type
+  - sector
+
+transactions:
+  - transaction_id (PK, AUTO_INCREMENT)
+  - player_id (FK -> players)
+  - transaction_type (BUY/SELL)
+  - stock_symbol
+  - quantity
+  - price
+  - total_amount
+  - transaction_date
+
+
+┌─────────────────────────────────────────────────────────────────────┐
+│ 9. TESTING CHECKLIST                                                │
+└─────────────────────────────────────────────────────────────────────┘
+
+✓ Database connection tested
+✓ Tables created successfully
+✓ Can compile with JDBC driver
+✓ TestDatabaseConnection runs without errors
+
+Next: Integrate into StockMarketGame.java
+
+
+┌─────────────────────────────────────────────────────────────────────┐
+│ 10. USEFUL QUERIES                                                  │
+└─────────────────────────────────────────────────────────────────────┘
+
+Get player statistics:
+  SELECT name, cash, total_profit, 
+         (SELECT COUNT(*) FROM portfolio WHERE player_id = p.player_id) as stocks
+  FROM players p;
+
+Get portfolio value:
+  SELECT player_id, SUM(quantity * purchase_price) as total_value
+  FROM portfolio
+  GROUP BY player_id;
+
+Get transaction summary:
+  SELECT transaction_type, COUNT(*) as count, SUM(total_amount) as total
+  FROM transactions
+  WHERE player_id = 1
+  GROUP BY transaction_type;
+
+
+╔════════════════════════════════════════════════════════════════════╗
+║  STATUS: ✓ JDBC Setup Complete - Ready for Integration            ║
+╚════════════════════════════════════════════════════════════════════╝

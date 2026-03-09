@@ -1,0 +1,39 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Stock Market Game (Swing)",
+            "request": "launch",
+            "mainClass": "StockMarketGame",
+            "classpath": [
+                "${workspaceFolder}",
+                "${workspaceFolder}/mysql-connector-j-9.4.0.jar"
+            ],
+            "console": "integratedTerminal"
+        },
+        {
+            "type": "java",
+            "name": "Stock Market Game (JavaFX)",
+            "request": "launch",
+            "mainClass": "StockMarketGameFX",
+            "vmArgs": "--module-path \"${env:PATH_TO_FX}\" --add-modules javafx.controls",
+            "classpath": [
+                "${workspaceFolder}",
+                "${workspaceFolder}/mysql-connector-j-9.4.0.jar"
+            ],
+            "console": "integratedTerminal"
+        },
+        {
+            "type": "java",
+            "name": "Test Database Connection",
+            "request": "launch",
+            "mainClass": "TestDatabaseConnection",
+            "classpath": [
+                "${workspaceFolder}",
+                "${workspaceFolder}/mysql-connector-j-9.4.0.jar"
+            ],
+            "console": "integratedTerminal"
+        }
+    ]
+}
